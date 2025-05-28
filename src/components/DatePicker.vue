@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { useDateStore } from 'src/stores/useDateStore.js'
+import { useDateStore } from 'src/stores/date-store.js'
 
 const dateStore = useDateStore()
 
@@ -54,10 +54,9 @@ const text = "Our love began its timeless count on"
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* 水平居中 */
     justify-content: center;
-    /* 备用：竖直方向也居中 */
-
+    width: 100vw;
+    
     /* 宽屏幕样式（row + 竖直居中） */
     @media (min-width: 768px) {
         /* 通常 768px 是平板/PC 的分界点 */
@@ -66,12 +65,13 @@ const text = "Our love began its timeless count on"
         /* 竖直居中 */
         justify-content: center;
         /* 水平方向也居中 */
-        gap: 16px;
+        gap: 1px;
         /* 可选：添加子组件间距 */
+        width:680px; /* 针对PC端 */
     }
 
     /* 背景渐变色 */
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)
 }
 
 </style>
