@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 基础应用主题 (继承自带深色ActionBar的亮色主题) -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- ToolBar的底色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- 暗色调，状态栏/StatusBar（最上方显示时间信号电量的区域）默认使用该颜色 -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- 控件（按钮、滑块等）的高亮颜色 -->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 无ActionBar主题（继承自支持日夜模式的无ActionBar主题） -->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- 关闭传统ActionBar -->
+        <item name="windowActionBar">false</item>
+        <!-- 隐藏标题栏 -->
+        <item name="windowNoTitle">true</item>
+        <!-- 设置窗口背景为透明（@null表示无背景） -->
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- 启动屏专用主题（继承自SplashScreen主题） -->
+    <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
+        <!-- 设置启动页背景图片（指向drawable目录下的splash资源） -->
+        <item name="android:background">@drawable/splash</item>
+    </style>
+</resources>

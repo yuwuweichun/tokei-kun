@@ -81,11 +81,6 @@ onMounted(() => {
 watch(() => dateStore.dateStr, calculateTimeDifference)
 </script>
 
-<style lang="sass" scoped>
-.carousel-container
-// 其他样式
-</style>
-
 
 <style lang="sass" scoped>
 .carousel-container
