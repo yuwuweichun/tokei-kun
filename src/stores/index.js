@@ -15,6 +15,6 @@ export default defineStore((/* { ssrContext } */) => {
 
   // You can add Pinia plugins here
   // pinia.use(SomePiniaPlugin)
-
+  pinia.use(piniaPluginPersistedstate)
   return pinia
 })
