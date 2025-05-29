@@ -15,7 +15,8 @@ export const useDateStore = defineStore('date', {
     updateDate(newDateStr) { // 更新日期字符串的方法
       this.dateStr = newDateStr
     }
-  }
+  },
+  persist: true
 })
 
 // 热模块替换（HMR）相关代码，用于开发环境
