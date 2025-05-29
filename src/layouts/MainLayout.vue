@@ -45,7 +45,7 @@ const linksList = [
     title: 'Github',
     caption: 'Tokei Kun 仓库地址',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: 'https://github.com/yuwuweichun/tokei-kun'
   },
   {
     title: 'puuung',
