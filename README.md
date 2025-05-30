@@ -3,9 +3,9 @@
 Our Tokei Kun
 
 ## Preview
-Electron mode
+### Electron mode
 <img src="public/images/preview/preview-electron.png" />
-Capacitor mode
+### Capacitor mode
 <img src="public/images/preview/preview-capacitor.png" />
 
 ## Release
