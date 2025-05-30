@@ -7,25 +7,25 @@
       v-model="slide"
       height="70vh"
     >
-      <q-carousel-slide name="first" img-src="/images/snuggled_up.jpg">
+      <q-carousel-slide name="first" img-src="images/snuggled_up.jpg">
         <div class="absolute-bottom custom-caption">
           <div class="text-h2">第{{daysPassed}}天</div>
           <div class="text-subtitle1">Days of us, a dance of love.</div>
         </div>
       </q-carousel-slide>
-      <q-carousel-slide name="second" img-src="/images/soft_kiss.jpg">
+      <q-carousel-slide name="second" img-src="images/soft_kiss.jpg">
         <div class="absolute-bottom custom-caption">
           <div class="text-h2">第{{weeksPassed}}周</div>
           <div class="text-subtitle1">"Weeks so sweet, like stars above."  </div>
         </div>
       </q-carousel-slide>
-      <q-carousel-slide name="third" img-src="/images/stay_like_this.jpg">
+      <q-carousel-slide name="third" img-src="images/stay_like_this.jpg">
         <div class="absolute-bottom custom-caption">
           <div class="text-h2">第{{monthsPassed}}个月</div>
           <div class="text-subtitle1">"Months together, a blooming rhyme."  </div>
         </div>
       </q-carousel-slide>
-      <q-carousel-slide name="fourth" img-src="/images/when_we_hug.jpeg">
+      <q-carousel-slide name="fourth" img-src="images/when_we_hug.jpeg">
         <div class="absolute-bottom custom-caption">
           <div class="text-h2">第{{yearsPassed}}年</div>
           <div class="text-subtitle1">"Years of love, woven in time."  </div>
@@ -67,7 +67,7 @@ const calculateTimeDifference = () => {
 
   // 计算年数差
   yearsPassed.value = currentDate.getFullYear() - dateStr.getFullYear()
-  // if (currentDate.getMonth() < dateStr.getMonth() || 
+  // if (currentDate.getMonth() < dateStr.getMonth() ||
   //     (currentDate.getMonth() === dateStr.getMonth() && currentDate.getDate() < dateStr.getDate())) {
   //   yearsPassed.value -= 1
   // }
@@ -86,7 +86,7 @@ watch(() => dateStore.dateStr, calculateTimeDifference)
 .carousel-container
   width: 100vw
   max-width: 680px // 针对PC端
-    
+
 
 .custom-caption
   text-align: center
