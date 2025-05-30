@@ -1,17 +1,23 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="q-electron-drag">
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
         <q-toolbar-title>
           Tokei Kun
         </q-toolbar-title>
 
+        <q-space />
+
+        <q-btn dense flat icon="remove" @click="minimize" />
+        <q-btn dense flat icon="crop_square" @click="toggleMaximize" />
+        <q-btn dense flat icon="close" @click="closeApp" />
+
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered class="q-electron-drag">
       <q-list>
         <q-item-label header>
           Essential Links
@@ -83,6 +89,18 @@ const navigation = [
     to: '/anniversary'
   }
 ]
+
+function minimize () {
+  window.myWindowAPI?.minimize()
+}
+
+function toggleMaximize () {
+  window.myWindowAPI?.toggleMaximize()
+}
+
+function closeApp () {
+  window.myWindowAPI?.close()
+}
 
 </script>
 
