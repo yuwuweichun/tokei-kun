@@ -18,8 +18,8 @@ async function createWindow () {
    */
   mainWindow = new BrowserWindow({
     icon: path.resolve(currentDir, 'icons/icon.png'), // tray icon
-    width: 1000,
-    height: 800,
+    width: 900,
+    height: 1200,
     useContentSize: true,
     frame: false,
     webPreferences: {
@@ -41,15 +41,15 @@ async function createWindow () {
     await mainWindow.loadFile('index.html')
   }
 
-  if (process.env.DEBUGGING) {
-    // if on DEV or Production with debug enabled
-    mainWindow.webContents.openDevTools()
-  } else {
-    // we're on production; no access to devtools pls
-    mainWindow.webContents.on('devtools-opened', () => {
-      mainWindow.webContents.closeDevTools()
-    })
-  }
+  // if (process.env.DEBUGGING) {
+  //   // if on DEV or Production with debug enabled
+  //   mainWindow.webContents.openDevTools()
+  // } else {
+  //   // we're on production; no access to devtools pls
+  //   mainWindow.webContents.on('devtools-opened', () => {
+  //     mainWindow.webContents.closeDevTools()
+  //   })
+  // }
 
   mainWindow.on('closed', () => {
     mainWindow = null
